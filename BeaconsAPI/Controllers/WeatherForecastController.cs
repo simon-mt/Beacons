@@ -12,22 +12,31 @@ namespace BeaconsAPI.Controllers
     [Route("[controller]")]
     public class BeaconsController : ControllerBase
     {
+        private readonly IBeaconsRepository _repo;
 
-
-        public BeaconsController()
+        public BeaconsController(IBeaconsRepository repo)
         {
+            _repo = repo;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
             // Read beacons list.
-            var beacons = new BeaconList();
+            var beacons = new BeaconList()
+            {
+                //Beacons = _repo.ReadAll()
+            };
 
+           
             return Ok(beacons);
         }
 
         [HttpPost]
-        public IActionResult Create(Beacon item) => _repo.Create(item) ? Ok() : BadRequest();
+        public IActionResult Create(Beacon item)
+        {
+            _repo.Create(item);
+            return Ok();
+        }
     }
 }
