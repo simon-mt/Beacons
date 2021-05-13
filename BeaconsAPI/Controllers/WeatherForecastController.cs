@@ -25,7 +25,7 @@ namespace BeaconsAPI.Controllers
             // Read beacons list.
             var beacons = new BeaconList()
             {
-                //Beacons = _repo.ReadAll()
+                Beacons = _repo.ReadAll()
             };
 
            
