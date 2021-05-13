@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BeaconsDomain;
+﻿using BeaconsDomain;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace BeaconsAPI.Controllers
 {
@@ -22,13 +17,11 @@ namespace BeaconsAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            // Read beacons list.
             var beacons = new BeaconList()
             {
-                //Beacons = _repo.ReadAll()
+                Beacons = _repo.ReadAll()
             };
-
-           
+            
             return Ok(beacons);
         }
 
