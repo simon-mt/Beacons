@@ -30,6 +30,30 @@ namespace BeaconsAPI.Controllers
             return Ok(beacons);
         }
 
+        [HttpGet]
+        [Route("{name}")]
+        public IActionResult GetBeaconByName([FromRoute] String name)
+        {
+            var beacons = new BeaconList()
+            {
+                Beacons = _repo.ReadByName(name)
+            };
+
+            return Ok(beacons);
+        }
+
+        [HttpGet]
+        [Route("Status")]
+        public IActionResult GetBeaconByActivated([FromQuery] Boolean activated)
+        {
+            var beacons = new BeaconList()
+            {
+                Beacons = _repo.ReadByActivated(activated)
+            };
+
+            return Ok(beacons);
+        }
+
         [HttpPost]
         public IActionResult Create(Beacon item)
         {

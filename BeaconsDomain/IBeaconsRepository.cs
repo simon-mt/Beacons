@@ -10,5 +10,9 @@ namespace BeaconsDomain
         void DeleteAll();
 
         public List<Beacon> ReadAll();
+
+        public List<Beacon> ReadByName(String name);
+
+        public List<Beacon> ReadByActivated(bool activated);
     }
 }

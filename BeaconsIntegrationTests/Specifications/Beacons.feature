@@ -16,6 +16,15 @@
     When beacon John is requested
     Then the number of returned beacons should be 1
 
+  Scenario: Search beacon by partial name
+    Given the following beacons exist
+        | Name                                 | Activated |
+        | Ted                                  | n         |
+        | John                                 | n         |
+        | Jack                                 | n         |
+    When beacon J is requested
+    Then the number of returned beacons should be 2
+
   Scenario: Search beacon by active
     Given the following beacons exist
         | Name                                 | Activated  |
