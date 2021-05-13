@@ -11,6 +11,17 @@
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    <PackageReference Include="Xunit.Gherkin.Quick" Version="4.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="3.1.15" />
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Automation\" />
+    <Folder Include="Specifications\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BeaconsAPI\BeaconsAPI.csproj" />
+    <ProjectReference Include="..\BeaconsDomain\BeaconsDomain.csproj" />
+  </ItemGroup>
 </Project>
