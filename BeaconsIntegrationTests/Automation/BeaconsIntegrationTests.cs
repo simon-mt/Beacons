@@ -12,7 +12,7 @@ using Xunit.Gherkin.Quick;
 namespace BeaconsIntegrationTests.Automation
 {
     [FeatureFile("./Specifications/Beacons.feature")]
-    public class QualificationsIntegrationTests : ApiBase, IDisposable
+    public class BeaconsIntegrationTests : ApiBase, IDisposable
     {
         private readonly List<HttpResponseMessage> _httpResponses = new List<HttpResponseMessage>();
 

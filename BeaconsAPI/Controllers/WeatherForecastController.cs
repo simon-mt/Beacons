@@ -22,13 +22,11 @@ namespace BeaconsAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            // Read beacons list.
             var beacons = new BeaconList()
             {
                 Beacons = _repo.ReadAll()
             };
 
-           
             return Ok(beacons);
         }
 
