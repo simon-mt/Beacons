@@ -5,6 +5,6 @@ namespace BeaconsDomain
 {
     public class BeaconList
     {
-        public List<Beacon> Beacons { get; set; } = new List<Beacon>();
+        public List<Beacon> Beacons { get; set; }
     }
 }

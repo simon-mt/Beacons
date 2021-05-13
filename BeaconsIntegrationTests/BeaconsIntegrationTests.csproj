@@ -24,9 +24,4 @@
     <ProjectReference Include="..\BeaconsAPI\BeaconsAPI.csproj" />
     <ProjectReference Include="..\BeaconsDomain\BeaconsDomain.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <None Update="Specifications\Beacons.feature">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
 </Project>
