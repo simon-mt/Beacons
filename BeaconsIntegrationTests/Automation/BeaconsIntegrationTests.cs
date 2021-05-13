@@ -17,8 +17,8 @@ namespace BeaconsIntegrationTests.Automation
         private readonly List<HttpResponseMessage> _httpResponses = new List<HttpResponseMessage>();
         private BeaconList _beaconList;
 
-        [Given("there are no saved beacons")]
-        public async Task There_Are_No_Beacons() => (await GetNumberOfBeaconsAsync()).Should().Be(0);
+        [Given("there are no saved beacons beside the default")]
+        public async Task There_Are_No_Beacons() => (await GetNumberOfBeaconsAsync()).Should().Be(2);
 
 
         [Given("the following beacons exist")]

@@ -1,11 +1,11 @@
 ﻿Feature: Beacons API Tests
 
   Scenario: Single beacon added
-    Given there are no saved beacons
+    Given there are no saved beacons beside the default
     When the following beacons are added
         | Name                                 | Activated |
         | Ted                                  | n         |
-    Then the number of saved beacons should be 1
+    Then the number of saved beacons should be 3
 
   Scenario: Search beacon by name
     Given the following beacons exist
@@ -32,4 +32,4 @@
         | John                                 | n          |
         | Jack                                 | n          |
     When the list of active beacons is requested
-    Then the number of returned beacons should be 1
+    Then the number of returned beacons should be 2
